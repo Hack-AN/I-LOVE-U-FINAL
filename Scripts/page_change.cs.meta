@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dc85e30034b29a84181ed1fe584fa974
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - start: {instanceID: 0}
+  - end: {instanceID: 0}
+  - SE: {instanceID: 0}
+  - page_flip: {fileID: 8300000, guid: 9c5c432eba4e28442883616a123fa27f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
