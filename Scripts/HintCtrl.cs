@@ -65,13 +65,12 @@ public class HintCtrl : MonoBehaviour
 
             if (PlayerPrefs.GetFloat("craft_gauge") <= 0.4f)
             {
-                if (question.color.a <= 1)
+                if(this.GetComponent<Button>().enabled == false)
+                    this.GetComponent<Button>().enabled = true;
+                if (question.color.a < 1)
                     question.color = new Color(question.color.r, question.color.g, question.color.b, question.color.a + Time.deltaTime);
             }
-            else
-            {
-                question.color = new Color(question.color.r, question.color.g, question.color.b, 0);
-            }
+
         }
         
 
@@ -540,6 +539,10 @@ public class HintCtrl : MonoBehaviour
         hintbox.SetActive(false);
     }
 
+    public void hintbtn_color_to_zero()
+    {
+        question.color = new Color(question.color.r, question.color.g, question.color.b, 0);
+    }
 }
 
 

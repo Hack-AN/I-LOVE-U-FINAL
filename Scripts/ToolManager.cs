@@ -234,7 +234,7 @@ public class ToolManager : MonoBehaviour
                                 if (iscolliding == true && col != null && ((col.gameObject.tag == ((int)index).ToString()) || (index == craft_index.eraser && col.gameObject.tag == "1")))
                                     x = Time.deltaTime / 100;
                                 else
-                                    x += Time.deltaTime / 5000;
+                                    x += Time.deltaTime / 3000;
                                 craft_gauge -= x;//Time.deltaTime * co_eff_infinite_craft;
                                 PlayerPrefs.SetFloat("craft_gauge", craft_gauge);
                                 craft_icon_frame.fillAmount = craft_gauge;

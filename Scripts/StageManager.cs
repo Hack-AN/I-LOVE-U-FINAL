@@ -57,6 +57,8 @@ public class StageManager : MonoBehaviour
     public Text guide_text;
     public GameObject tuto_panel;
 
+    public GameObject hint_btn;
+
     public bool hadreset = false;
     void Start()  // cur_stage_num에 대응되는 스테이지 오브젝트 활성화. ishistory에 따라 get_max_stage()를 쓸지 get_history_index()를 쓸지 결정. 특정 스테이지에선 멘트 인트로 필요.
     {
@@ -69,7 +71,8 @@ public class StageManager : MonoBehaviour
     {
         StopCoroutine("success_check");
         GameManager.Instance.cleared = false;
-
+        hint_btn.GetComponent<HintCtrl>().hintbtn_color_to_zero();
+        hint_btn.GetComponent<Button>().enabled = false;
 
         for (int i = 0; i < playingUI.Length; i++)
             playingUI[i].SetActive(false);
